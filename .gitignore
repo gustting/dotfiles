@@ -1,0 +1,7 @@
+.kopia_pass
+.rclone_pass
+.ssh/id_*
+
+.cache/
+Downloads/
+node_modules/
