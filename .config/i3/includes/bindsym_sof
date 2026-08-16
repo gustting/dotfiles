@@ -1,0 +1,21 @@
+
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+Return exec ghostty
+bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+
+set $refresh_i3status killall -SIGUSR1 i3status
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --allow-boost -i 5 && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --allow-boost -d 5 && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pamixer -t && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pamixer --default-source -t && $refresh_i3status
+
+bindsym $mod+o exec i3lock -c 00000088 --blur 5 && xset dpms force off 
+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=1 -q set 10%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q  set 10%+

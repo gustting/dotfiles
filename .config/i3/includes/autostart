@@ -1,0 +1,27 @@
+exec --no-startup-id dex --autostart --environment i3
+
+exec --no-startup-id xrandr --output HDMI-1 --mode 1360x768 --left-of eDP-1
+
+exec --no-startup-id feh --bg-fill ~/.config/i3/includes/themes/walpaper/magma_blue.jpeg
+
+exec --no-startup-id picom -b
+
+exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf &
+
+exec --no-startup-id dunst
+
+#exec --no-startup-id xset s off
+#exec --no-startup-id xset s noblank
+#exec --no-startup-id xset -dpms
+
+exec --no-startup-id xset +dpms
+exec --no-startup-id xset dpms 300 300 300
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 00000088 --blur 10
+
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
