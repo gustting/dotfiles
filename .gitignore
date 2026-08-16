@@ -5,3 +5,6 @@
 .cache/
 Downloads/
 node_modules/
+
+.tmux/plugins/
+.tmux/plugins/
